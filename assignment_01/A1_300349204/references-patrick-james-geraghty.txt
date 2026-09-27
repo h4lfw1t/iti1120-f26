@@ -1,0 +1,2 @@
+No code copied from any source other than the module help page (e.g., help(turtle))
+Patrick Geraghty
