@@ -1,0 +1,355 @@
+>>> elementary_school_quiz(0, 2)
+Question 1:
+2 to what is 1, i.e., what is the result of log_2 (1)? 0
+Question 2:
+2 to what is 64, i.e., what is the result of log_2 (64)? 0
+1
+>>> elementary_school_quiz(0, 1)
+Question 1:
+2 to what is 32, i.e., what is the result of log_2 (32)? 0
+0
+>>> elementary_school_quiz(0, 1)
+Question 1:
+2 to what is 1, i.e., what is the result of log_2 (1)? 0
+1
+>>> elementary_school_quiz(1, 1)
+Question 1:
+What is the result of 2^8? 0
+0
+>>> elementary_school_quiz(1, 1)
+Question 1:
+What is the result of 2^10? 1024
+1
+>>> elementary_school_quiz(1, 2)
+Question 1:
+What is the result of 2^10? 1024
+Question 2:
+What is the result of 2^5? 32
+2
+>>> high_school_quiz(1, 3, 1)
+The quadratic equation 1x^2 + 3x + 1 = 0
+has the following real roots:
+-0.3819660112501051 and -2.618033988749895
+>>>
+>>>
+>>> high_school_quiz(3, 2, 15)
+The quadratic equation 3x^2 + 2x + 15 = 0
+has the following two complex roots:
+-0.3333333333333333 + i2.2110831935702664
+ and
+-0.3333333333333333 - i2.2110831935702664
+>>>
+>>>
+>>> high_school_quiz(3, 2, -15)
+The quadratic equation 3x^2 + 2x + -15 = 0
+has the following real roots:
+1.9274433277084226 and -2.5941099943750894
+>>>
+>>>
+>>> high_school_quiz(1, 2, 1)
+The quadratic equation 1x^2 + 2x + 1 = 0
+has only one solution, a real root:
+-1.0
+>>>
+>>>
+>>> high_school_quiz(0, 2, 4)
+The linear equation 2x + 4 = 0
+has the following root/solution: -2.0
+>>>
+>>>
+>>> high_school_quiz(0, 0, 0)
+The quadratic equation 0x^2 + 0x + 0 = 0
+is satisfied for all numbers x
+>>>
+>>>
+>>> high_school_quiz(0, 0, 10)
+The quadratic equation 0x^2 + 0x + 10 = 0
+is satisfied for no number x
+
+*******************************************
+*                                         *
+*  __Welcome to my math quiz-generator__  *
+*                                         *
+*******************************************
+
+What is your name? Vida
+Hi Vida. Are you in? Enter
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+1
+****************************************************************************
+*                                                                          *
+*  __Vida, welcome to my quiz-generator for elementary school students.__  *
+*                                                                          *
+****************************************************************************
+
+Vida, what would you like to practice? Enter
+0 for inverse of exponentiation
+1 for exponentiation
+0
+How many practice questions would you like to do? Enter 0, 1, or 2: 2
+Vida, here is your 2 questions:
+Question 1:
+2 to what is 256, i.e., what is the result of log_2 (256)? 8
+Question 2:
+2 to what is 1024, i.e., what is the result of log_2 (1024)? 10
+Congratulations Vida! You'll probably get an A tomorrow.
+Good bye Vida
+
+*******************************************
+*                                         *
+*  __Welcome to my math quiz-generator__  *
+*                                         *
+*******************************************
+
+What is your name? Vida Dujmovic
+Hi Vida Dujmovic. Are you in? Enter
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+Ah
+Good bye Vida Dujmovic!
+❯ uv run python a2_part1_300349204.py
+*******************************************
+*                                         *
+*  __Welcome to my math quiz-generator__  *
+*                                         *
+*******************************************
+
+What is your name? Vida Dujmovic
+Hi Vida Dujmovic. Are you in? Enter
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+Ah
+Vida Dujmovic, you are not a target audience for this software.
+Good bye Vida Dujmovic!
+
+*******************************************
+*                                         *
+*  __Welcome to my math quiz-generator__  *
+*                                         *
+*******************************************
+
+What is your name? Arya Stark
+Hi Arya Stark. Are you in? Enter
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+2
+***********************************************************************
+*                                                                     *
+*  __quadratic equation, a·x^2 + b·x + c= 0, solver for Arya Stark__  *
+*                                                                     *
+***********************************************************************
+
+Arya Stark, would you like a quadratic equation solved?     YeS
+Good choice!
+Enter a number the coefficient a: 1
+Enter a number the coefficient b: 2
+Enter a number the coefficient c: 3
+The quadratic equation 1.0x^2 + 2.0x + 3.0 = 0
+has the following two complex roots:
+-1.0 + i1.4142135623730951
+ and
+-1.0 - i1.4142135623730951
+Arya Stark, would you like a quadratic equation solved?          yeS
+Good choice!
+Enter a number the coefficient a: -1
+Enter a number the coefficient b: 10
+Enter a number the coefficient c: 36
+The quadratic equation -1.0x^2 + 10.0x + 36.0 = 0
+has the following real roots:
+-2.810249675906654 and 12.810249675906654
+Arya Stark, would you like a quadratic equation solved? YES
+Good choice!
+Enter a number the coefficient a: 0
+Enter a number the coefficient b: 2.5
+Enter a number the coefficient c: 3.246
+The linear equation + 2.5x + 3.246 = 0
+has the following root/solution: -1.2984
+Arya Stark, would you like a quadratic equation solved? yes
+Good choice!
+Enter a number the coefficient a: 0
+Enter a number the coefficient b: 0
+Enter a number the coefficient c: 2.5
+The quadratic equation 0.0x^2 + 0.0x + 2.5 = 0
+is satisfied for no number x
+Arya Stark, would you like a quadratic equation solved? yes
+Good choice!
+Enter a number the coefficient a: 0
+Enter a number the coefficient b: 0
+Enter a number the coefficient c: 0
+The quadratic equation 0.0x^2 + 0.0x + 0.0 = 0
+is satisfied for all numbers x
+Arya Stark, would you like a quadratic equation solved? NO
+Good bye Arya Stark!
+
+*******************************************
+*                                         *
+*  __Welcome to my math quiz-generator__  *
+*                                         *
+*******************************************
+
+What is your name? Ji-Ah
+Hi Ji-Ah. Are you in? Enter
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+1
+*****************************************************************************
+*                                                                           *
+*  __Ji-Ah, welcome to my quiz-generator for elementary school students.__  *
+*                                                                           *
+*****************************************************************************
+
+Ji-Ah, what would you like to practice? Enter
+0 for inverse of exponentiation
+1 for exponentiation
+5
+Invalid choice. Only 0 or 1 is accepted.
+Good bye Ji-Ah!
+
+*******************************************
+*                                         *
+*  __Welcome to my math quiz-generator__  *
+*                                         *
+*******************************************
+
+What is your name? Hippolyta
+Hi Hippolyta. Are you in? Enter
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+1
+*********************************************************************************
+*                                                                               *
+*  __Hippolyta, welcome to my quiz-generator for elementary school students.__  *
+*                                                                               *
+*********************************************************************************
+
+Hippolyta, what would you like to practice? Enter
+0 for inverse of exponentiation
+1 for exponentiation
+0
+How many practice questions would you like to do? Enter 0, 1, or 2: 0
+Zero questions. OK. Good bye
+Good bye Hippolyta!
+
+*******************************************
+*                                         *
+*  __Welcome to my math quiz-generator__  *
+*                                         *
+*******************************************
+
+What is your name? Leti
+Hi Leti. Are you in? Enter
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+1
+****************************************************************************
+*                                                                          *
+*  __Leti, welcome to my quiz-generator for elementary school students.__  *
+*                                                                          *
+****************************************************************************
+
+Leti, what would you like to practice? Enter
+0 for inverse of exponentiation
+1 for exponentiation
+1
+How many practice questions would you like to do? Enter 0, 1, or 2: 5
+Only 0,1, or 2 are valid choices for the number of questions.
+Good bye Leti!
+
+*******************************************
+*                                         *
+*  __Welcome to my math quiz-generator__  *
+*                                         *
+*******************************************
+
+What is your name? Wolf
+Hi Wolf. Are you in? Enter
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+1
+****************************************************************************
+*                                                                          *
+*  __Wolf, welcome to my quiz-generator for elementary school students.__  *
+*                                                                          *
+****************************************************************************
+
+Wolf, what would you like to practice? Enter
+0 for inverse of exponentiation
+1 for exponentiation
+1
+How many practice questions would you like to do? Enter 0, 1, or 2: 1
+Wolf, here is your 1 questions:
+Question 1:
+What is the result of 2^9? 512
+Congratulations Wolf! You'll probably get an A tomorrow.
+Good bye Wolf!
+
+*******************************************
+*                                         *
+*  __Welcome to my math quiz-generator__  *
+*                                         *
+*******************************************
+
+What is your name? Dunce
+Hi Dunce. Are you in? Enter
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+1
+*****************************************************************************
+*                                                                           *
+*  __Dunce, welcome to my quiz-generator for elementary school students.__  *
+*                                                                           *
+*****************************************************************************
+
+Dunce, what would you like to practice? Enter
+0 for inverse of exponentiation
+1 for exponentiation
+1
+How many practice questions would you like to do? Enter 0, 1, or 2: 2
+Dunce, here is your 2 questions:
+Question 1:
+What is the result of 2^10? 5
+Question 2:
+What is the result of 2^2? 5
+I think you need some more practice, Dunce.
+Good bye Dunce!
+
+*******************************************
+*                                         *
+*  __Welcome to my math quiz-generator__  *
+*                                         *
+*******************************************
+
+What is your name? Half-wit
+Hi Half-wit. Are you in? Enter
+1 for elementary school
+2 for high school or
+3 or other character(s) for none of the above?
+1
+********************************************************************************
+*                                                                              *
+*  __Half-wit, welcome to my quiz-generator for elementary school students.__  *
+*                                                                              *
+********************************************************************************
+
+Half-wit, what would you like to practice? Enter
+0 for inverse of exponentiation
+1 for exponentiation
+1
+How many practice questions would you like to do? Enter 0, 1, or 2: 2
+Half-wit, here is your 2 questions:
+Question 1:
+What is the result of 2^8? 256
+Question 2:
+What is the result of 2^4? 0
+You did ok, Half-wit, but I know you can do better.
+Good bye Half-wit!
