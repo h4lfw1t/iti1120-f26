@@ -10,3 +10,11 @@ def is_divisible23n8(n):
           return True
      else:
           return False
+
+def print_all_23n8(num: int) -> None:
+     for i in range(1, num+1):
+          if is_divisible23n8(i):
+               print(i)
+
+user_num = int(input("Enter a non-negative integer: "))
+print_all_23n8(user_num)
