@@ -1,0 +1,88 @@
+# Q1
+Please input a list of integers separated by spaces: 1 2 3 0 5 -6 995
+Please input an integer: 2
+The number of elements divisible by 2 is 3
+
+
+# Q2
+Please input a list of integers separated by spaces: 1        4 3 3 4
+True
+
+Please input a list of integers separated by spaces: 1 2 3      3      3 4.5 6 5
+True
+
+Please input a list of integers separated by spaces: 1.0 2 3.7 4 3 2
+False
+
+Please input a list of integers separated by spaces: 7.7
+False
+
+
+# Q3
+Please input a list of integers separated by spaces: 1 1 2 3.0 3 3 3 3 6 5
+5
+
+Please input a list of integers separated by spaces: 6 6   7 1 1 1 1 4.5 1
+4
+
+Please input a list of integers separated by spaces: 6 2.4 4 8 6
+1
+
+Please input a list of integers separated by spaces:
+0
+
+
+# Q4
+Enter the name of the file: file1.txt
+
+Before clean-up:
+ ['D', 'F', 'B', 'G', '$', '$', '$', 'A', 'A', 'C', 'G', 'D', 'A', '$', 'C', '*', 'P', 'E', 'D', '*', 'D', 'D', 'E', 'B', '$', '#', 'D', 'D']
+
+After clean-up:
+ ['$', '$', '$', '$', 'A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'D', 'D', 'D', 'D', 'E', 'E', 'G', 'G']
+
+This list has no * but is not rigorous and it has 20 characters.
+
+
+Enter the name of the file: file2.txt
+
+Before clean-up:
+ ['A', '*', '$', 'C', '*', '*', 'P', 'E', 'D', 'D', '#', 'D', 'E', 'B', '$', '#']
+
+After clean-up:
+ ['#', '#', '$', '$', 'D', 'D', 'E', 'E']
+
+This list is now rigorous; it has no * and it has 8 characters.
+
+
+Enter the name of the file: file3.txt
+
+Before clean-up:
+ ['A', 'B', '*', 'C', '*', 'D', '*', '*', '*', 'E']
+
+After clean-up:
+ []
+
+This list is now rigorous; it has no * and it has 0 characters.
+
+
+Enter the name of the file: file4.txt
+
+Before clean-up:
+ ['A', 'A', 'A', 'A', 'A', 'A', 'A']
+
+After clean-up:
+ ['A', 'A', 'A', 'A', 'A', 'A']
+
+This list has no * but is not rigorous and it has 6 characters.
+
+
+Enter the name of the file: file5.txt
+
+Before clean-up:
+ []
+
+After clean-up:
+ []
+
+This list is now rigorous; it has no * and it has 0 characters.

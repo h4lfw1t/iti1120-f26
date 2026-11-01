@@ -1,0 +1,322 @@
+============================================================================
+RUN 1
+============================================================================
+
+Hello. My name is Robot and I am the dealer.
+Welcome to my card game!
+Your current deck of cards is:
+3♢ 2♢ 3♠ 4♢ 5♣ 10♠ K♢ 6♡ A♢ J♡ 6♠ 3♣ 9♠ A♣ J♣ A♠ 6♢ 4♡ 7♠ 8♣ 5♠ 5♢ 10♡ 3♡ K♡ 8♢
+Do not worry. I cannot see the order of your cards
+Now discard all the pairs from your deck. I will do the same.
+
+Press enter to continue.
+
+***********************************************************
+
+Your turn.
+
+Your current deck of cards is:
+
+2♢ 5♢ 6♢ 9♠ 7♠ A♠
+
+I have 7 cards. If 1 stands for my first card and
+7 for my last card, which of my cards would you like?
+Give me an integer beteen 1 and 7: 9
+Invalid number. Please enter an integer between 1 and 7: -8
+Invalid number. Please enter an integer between 1 and 7: 2
+You asked for my 2nd card.
+Here it is. It is Q♠.
+
+With Q♠ added, your current deck of cards is:
+
+2♢ 5♢ 6♢ 9♠ 7♠ A♠ Q♠
+
+And after discarding pairs and shuffling, your deck is:
+
+7♠ 9♠ Q♠ 5♢ A♠ 2♢ 6♢
+
+
+
+Press enter to continue.
+
+***********************************************************
+My turn.
+
+I took your 7th card.
+
+Press enter to continue.
+
+***********************************************************
+
+Your turn.
+
+Your current deck of cards is:
+
+7♠ 9♠ Q♠ 5♢ A♠ 2♢
+
+I have 5 cards. If 1 stands for my first card and
+5 for my last card, which of my cards would you like?
+Give me an integer beteen 1 and 5: 5
+You asked for my 5th card.
+Here it is. It is 2♣.
+
+With 2♣ added, your current deck of cards is:
+
+7♠ 9♠ Q♠ 5♢ A♠ 2♢ 2♣
+
+And after discarding pairs and shuffling, your deck is:
+
+A♠ 9♠ Q♠ 5♢ 7♠
+
+
+
+Press enter to continue.
+
+***********************************************************
+My turn.
+
+I took your 2nd card.
+
+Press enter to continue.
+
+***********************************************************
+
+Your turn.
+
+Your current deck of cards is:
+
+A♠ Q♠ 5♢ 7♠
+
+I have 3 cards. If 1 stands for my first card and
+3 for my last card, which of my cards would you like?
+Give me an integer beteen 1 and 3: 1
+You asked for my 1st card.
+Here it is. It is 7♡.
+
+With 7♡ added, your current deck of cards is:
+
+A♠ Q♠ 5♢ 7♠ 7♡
+
+And after discarding pairs and shuffling, your deck is:
+
+A♠ 5♢ Q♠
+
+
+
+Press enter to continue.
+
+***********************************************************
+My turn.
+
+I took your 1st card.
+
+Press enter to continue.
+
+***********************************************************
+
+Your turn.
+
+Your current deck of cards is:
+
+5♢ Q♠
+
+I have 1 cards. If 1 stands for my first card and
+1 for my last card, which of my cards would you like?
+Give me an integer beteen 1 and 1: 1
+You asked for my 1st card.
+Here it is. It is 5♡.
+
+With 5♡ added, your current deck of cards is:
+
+5♢ Q♠ 5♡
+
+And after discarding pairs and shuffling, your deck is:
+
+Q♠
+
+
+***********************************************************
+Ups. I do not have any more cards
+You lost! I, Robot, win
+
+
+============================================================================
+RUN 2
+============================================================================
+Hello. My name is Robot and I am the dealer.
+Welcome to my card game!
+Your current deck of cards is:
+A♢ J♣ K♣ A♣ 2♢ 4♡ 6♠ 8♡ 3♣ 4♠ A♡ J♢ 8♣ 10♠ 2♡ 5♠ 4♢ 2♠ 5♢ 6♢ 7♠ 8♠ 9♣ 6♡ 2♣ 9♠
+Do not worry. I cannot see the order of your cards
+Now discard all the pairs from your deck. I will do the same.
+
+Press enter to continue.
+
+***********************************************************
+
+Your turn.
+
+Your current deck of cards is:
+
+7♠ 3♣ 4♢ 8♠ 10♠ 6♡ A♡ K♣
+
+I have 9 cards. If 1 stands for my first card and
+9 for my last card, which of my cards would you like?
+Give me an integer beteen 1 and 9: 3
+You asked for my 3rd card.
+Here it is. It is 3♡.
+
+With 3♡ added, your current deck of cards is:
+
+7♠ 3♣ 4♢ 8♠ 10♠ 6♡ A♡ K♣ 3♡
+
+And after discarding pairs and shuffling, your deck is:
+
+7♠ 10♠ 4♢ 6♡ 8♠ K♣ A♡
+
+
+
+Press enter to continue.
+
+***********************************************************
+My turn.
+
+I took your 5th card.
+
+Press enter to continue.
+
+***********************************************************
+
+Your turn.
+
+Your current deck of cards is:
+
+7♠ 10♠ 4♢ 6♡ K♣ A♡
+
+I have 7 cards. If 1 stands for my first card and
+7 for my last card, which of my cards would you like?
+Give me an integer beteen 1 and 7: 7
+You asked for my 7th card.
+Here it is. It is Q♡.
+
+With Q♡ added, your current deck of cards is:
+
+7♠ 10♠ 4♢ 6♡ K♣ A♡ Q♡
+
+And after discarding pairs and shuffling, your deck is:
+
+Q♡ 4♢ A♡ 7♠ 10♠ K♣ 6♡
+
+
+
+Press enter to continue.
+
+***********************************************************
+My turn.
+
+I took your 7th card.
+
+Press enter to continue.
+
+***********************************************************
+
+Your turn.
+
+Your current deck of cards is:
+
+Q♡ 4♢ A♡ 7♠ 10♠ K♣
+
+I have 5 cards. If 1 stands for my first card and
+5 for my last card, which of my cards would you like?
+Give me an integer beteen 1 and 5: 5
+You asked for my 5th card.
+Here it is. It is K♡.
+
+With K♡ added, your current deck of cards is:
+
+Q♡ 4♢ A♡ 7♠ 10♠ K♣ K♡
+
+And after discarding pairs and shuffling, your deck is:
+
+Q♡ 10♠ A♡ 7♠ 4♢
+
+
+
+Press enter to continue.
+
+***********************************************************
+My turn.
+
+I took your 5th card.
+
+Press enter to continue.
+
+***********************************************************
+
+Your turn.
+
+Your current deck of cards is:
+
+Q♡ 10♠ A♡ 7♠
+
+I have 3 cards. If 1 stands for my first card and
+3 for my last card, which of my cards would you like?
+Give me an integer beteen 1 and 3: 2
+You asked for my 2nd card.
+Here it is. It is 10♣.
+
+With 10♣ added, your current deck of cards is:
+
+Q♡ 10♠ A♡ 7♠ 10♣
+
+And after discarding pairs and shuffling, your deck is:
+
+7♠ A♡ Q♡
+
+
+
+Press enter to continue.
+
+***********************************************************
+My turn.
+
+I took your 3rd card.
+
+Press enter to continue.
+
+***********************************************************
+
+Your turn.
+
+Your current deck of cards is:
+
+7♠ A♡
+
+I have 3 cards. If 1 stands for my first card and
+3 for my last card, which of my cards would you like?
+Give me an integer beteen 1 and 3: 3
+You asked for my 3rd card.
+Here it is. It is A♠.
+
+With A♠ added, your current deck of cards is:
+
+7♠ A♡ A♠
+
+And after discarding pairs and shuffling, your deck is:
+
+7♠
+
+
+
+Press enter to continue.
+
+***********************************************************
+My turn.
+
+I took your 1st card.
+
+Press enter to continue.
+
+***********************************************************
+Ups. You do not have any more cards
+Congratulations! You, Human, win
