@@ -1,0 +1,93 @@
+>>> net1=create_network("net1.txt")
+>>> net1
+[(0, [1, 2, 3]), (1, [0, 4, 6, 7, 9]), (2, [0, 3, 6, 8, 9]), (3, [0, 2, 8, 9]), (4, [1, 6, 7, 8]),
+(5, [9]), (6, [1, 2, 4, 8]), (7, [1, 4, 8]), (8, [2, 3, 4, 6, 7]), (9, [1, 2, 3, 5])]
+>>> net2=create_network("net2.txt")
+>>> net2
+[(0, [1, 2, 3, 4, 5, 6, 7, 8, 9]), (1, [0, 4, 6, 7, 9]), (2, [0, 3, 6,8, 9]), (3, [0, 2, 8, 9]), (4, [0, 1, 6, 7, 8]),
+(5, [0, 9]), (6, [0, 1, 2, 4, 8]), (7, [0, 1, 4, 8]), (8, [0, 2, 3, 4, 6, 7]), (9, [0, 1, 2, 3, 5])]
+>>> net3=create_network("net3.txt")
+>>>
+[(0, [1, 2, 3, 4, 5, 6, 7, 8, 9]), (1, [0, 4, 6, 7, 9]), (2, [0, 3, 6,8, 9]), (3, [0, 2, 8, 9]), (4, [0, 1, 6, 7, 8]),
+(5, [0, 9]), (6, [0, 1, 2, 4, 8]), (7, [0, 1, 4, 8]), (8, [0, 2, 3, 4, 6, 7]), (9, [0, 1, 2, 3, 5]),
+(100, [112]), (112, [100, 114]), (114, [112])]
+>>> net4=create_network("big.txt")
+>>> net4[500:502]
+[(500, [348, 353, 354, 355, 361, 363, 368, 373, 374, 376, 378, 382, 388, 391, 392, 396, 400, 402, 404, 408, 409, 410,
+412, 414, 416, 417, 421, 423, 428, 431, 438, 439, 444, 445, 450,
+452,455, 463, 465, 474, 475, 483, 484,487, 492, 493,
+497, 503, 506, 507, 513, 514, 517, 519, 520, 521, 524, 525, 527, 531, 537, 538, 542, 546, 547, 548, 553, 555, 556, 557,
+560, 563, 565, 566, 580, 591, 601, 604, 614, 637, 645, 651, 683]), (501, [198, 348, 364, 393, 399, 441, 476, 564])]
+>>> getCommonFriends(3,1,net1)
+[0, 9]
+>>> getCommonFriends(0,112,net3)
+[]
+>>> getCommonFriends(217,163,net4)
+[0, 100, 119, 150]
+>>> recommend(6,net1)
+7
+>>> recommend(4,net2)
+2
+>>> recommend(0,net2)
+>>> recommend(114, net3)
+100
+>>> recommend(112,net3)
+>>> recommend(217,net4)
+163
+>>> k_or_more_friends(net1, 5)
+3
+>>> k_or_more_friends(net2, 8)
+1
+>>> k_or_more_friends(net3, 12)
+0
+>>> k_or_more_friends(net4, 70)
+33
+>>> maximum_num_friends(net1)
+5
+>>> maximum_num_friends(net2)
+9
+>>> maximum_num_friends(net3)
+9
+>>> maximum_num_friends(net4)
+347
+>>> people_with_most_friends(net1)
+[1, 2, 8]
+>>> people_with_most_friends(net2)
+[0]
+>>> people_with_most_friends(net3)
+[0]
+>>> people_with_most_friends(net4)
+[0]
+>>> average_num_friends(net1)
+3.8
+>>> average_num_friends(net2)
+5.0
+>>> average_num_friends(net3)
+4.153846153846154
+>>> average_num_friends(net4)
+19.78
+>>> knows_everyone(net1)
+False
+>>> knows_everyone(net2)
+True
+4
+>>> knows_everyone(net3)
+False
+>>> knows_everyone(net4)
+False
+>>> get_uid(net1)
+Enter an integer for a user ID:alsj
+That was not an integer. Please try again.
+Enter an integer for a user ID: twenty
+That was not an integer. Please try again.
+Enter an integer for a user ID:9aslj
+That was not an integer. Please try again.
+Enter an integer for a user ID:100000
+That user ID does not exist. Try again.
+Enter an integer for a user ID:4.5
+That was not an integer. Please try again.
+Enter an integer for a user ID: -10
+That user ID does not exist. Try again.
+Enter an integer for a user ID:-1
+That user ID does not exist. Try again.
+Enter an integer for a user ID:7
