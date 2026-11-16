@@ -1,4 +1,53 @@
+# Course: ITI 1120
+# Assignment: 5
+# Geraghty, Patrick
+# 300349204
+
 import random
+
+def find_id_index(ids: list[int], target: int) -> int:
+    """
+    Binary search to find the index of a target ID in a sorted list of IDs.
+
+    :param ids: List of sorted user IDs
+    :type ids: list[int]
+    :param target: Target user ID to find
+    :type target: int
+    :return: Index of the target ID if found, otherwise -1
+    :rtype: int
+    """
+    left, right = 0, len(ids) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if ids[mid] == target:
+            return mid
+        elif ids[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+def find_user_index(network: list[tuple[int, list[int]]], user_id: int) -> int:
+    """
+    Binary search to find the index of a user in the network based on user ID.
+
+    :param network: List of tuples where each tuple contains a user ID and a list of friends
+    :type network: list[tuple[int, list[int]]]
+    :param user_id: User ID to find
+    :type user_id: int
+    :return: Index of the user in the network if found, otherwise -1
+    :rtype: int
+    """
+    left, right = 0, len(network) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if network[mid][0] == user_id:
+            return mid
+        elif network[mid][0] < user_id:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
 
 def create_network(file_name):
     '''(str)->list of tuples where each tuple has 2 elements the first is int and the second is list of int
@@ -12,13 +61,50 @@ def create_network(file_name):
     There is no user without a friend
     Users sorted by ID, friends of each user are sorted by ID
     Returns the 2D list representing the frendship nework as described above
-    where the network is sorted by the ID and each list of int (in a tuple) is sorted (i.e. each list of friens is sorted).
+    where the network is sorted by the ID and each list of int (in a tuple) is sorted (i.e. each list of friends is sorted).
     '''
-    friends = open(file_name).read().splitlines()
-    network=[]
+    # Assuming we can't use sets, dictionaries, or maps (what a pain)
+    # However, we will use binary search for fun (surely there isn't a restriction on what I can code?)
+    with open(file_name) as file:
+        lines = file.read().splitlines()
 
-    # YOUR CODE GOES HERE
-    
+    edges = []
+    all_ids = []
+
+    # Collect all edges and user IDs from each line after user count
+    for line in lines[1:]:
+        values = line.split()
+        user_id = int(values[0])
+        friend_id = int(values[1])
+
+        edges.append((user_id, friend_id))
+        all_ids.append(user_id)
+        all_ids.append(friend_id)
+
+    all_ids.sort()
+
+    # Create de-duplicated list of user IDs
+    ids = []
+    for user_id in all_ids:
+        if len(ids) == 0 or user_id != ids[-1]:     # Only need to check last element since the list is sorted
+            ids.append(user_id)
+
+    # Initialize dummy network
+    network = []
+    for user_id in ids:
+        network.append((user_id, []))
+
+    # Populate the network with friends
+    for user_id, friend_id in edges:
+        user_index = find_id_index(ids, user_id)
+        friend_index = find_id_index(ids, friend_id)
+
+        network[user_index][1].append(friend_id)
+        network[friend_index][1].append(user_id)
+
+    for user_id, friends in network:
+        friends.sort()
+
     return network
 
 def getCommonFriends(user1, user2, network):
@@ -28,8 +114,25 @@ def getCommonFriends(user1, user2, network):
     Given a 2D-list for friendship network, returns the sorted list of common friends of user1 and user2
     '''
     common=[]
-    
-    # YOUR CODE GOES HERE
+
+    # Get the friends lists for user1 and user2
+    user1_index = find_user_index(network, user1)
+    user2_index = find_user_index(network, user2)
+
+    friends1 = network[user1_index][1]
+    friends2 = network[user2_index][1]
+
+    # Use two pointers to find common friends
+    i, j = 0, 0
+    while i < len(friends1) and j < len(friends2):
+        if friends1[i] == friends2[j]:
+            common.append(friends1[i])
+            i += 1
+            j += 1
+        elif friends1[i] < friends2[j]:
+            i += 1
+        else:
+            j += 1
 
     return common
 
@@ -43,21 +146,57 @@ def recommend(user, network):
     Otherwise it returns the ID of the recommended friend. A recommended friend is a person
     you are not already friends with and with whom you have the most friends in common in the whole network.
     If there is more than one person with whom you have the maximum number of friends in common
-    return the one with the smallest ID. '''
+    return the one with the smallest ID.
+    '''
 
-    # YOUR CODE GOES HERE
-    pass
+    # Get the friends of the user
+    user_index = find_user_index(network, user)
+    user_friends = network[user_index][1]
 
-    
+    # Determine the best match without sets or dictionaries :(
+    best_match = None
+    max_common_friends = 0
 
+    # Also assuming enumerate is not allowed
+    for other_user_index in range(len(network)):
+        other_user_id = network[other_user_index][0]
+
+        if other_user_id == user or other_user_id in user_friends:
+            continue  # Skip the user themselves and their friends
+
+        other_user_friends = network[other_user_index][1]
+
+        # Run two pointers to count common friends
+        i = 0
+        j = 0
+        common_count = 0
+
+        while i < len(user_friends) and j < len(other_user_friends):
+            if user_friends[i] == other_user_friends[j]:
+                common_count += 1
+                i += 1
+                j += 1
+            elif user_friends[i] < other_user_friends[j]:
+                i += 1
+            else:
+                j += 1
+
+        if common_count > max_common_friends:
+            max_common_friends = common_count
+            best_match = other_user_id
+
+    return best_match
 
 def k_or_more_friends(network, k):
     '''(2Dlist,int)->int
     Given a 2D-list for friendship network and non-negative integer k,
     returns the number of users who have at least k friends in the network
     Precondition: k is non-negative'''
-    # YOUR CODE GOES HERE
-    pass
+    count = 0
+    for user_id, friends in network:
+        if len(friends) >= k:
+            count += 1
+    return count
  
 
 def maximum_num_friends(network):
@@ -65,24 +204,32 @@ def maximum_num_friends(network):
     Given a 2D-list for friendship network,
     returns the maximum number of friends any user in the network has.
     '''
-    # YOUR CODE GOES HERE
-    pass
+    max_friends = 0
+    for user_id, friends in network:
+        if len(friends) > max_friends:
+            max_friends = len(friends)
+    return max_friends
     
 
 def people_with_most_friends(network):
     '''(2Dlist)->1D list
     Given a 2D-list for friendship network, returns a list of people (IDs) who have the most friends in network.'''
     max_friends=[]
-    # YOUR CODE GOES HERE
-    return    max_friends
+    for user_id, friends in network:
+        if len(friends) == maximum_num_friends(network):
+            max_friends.append(user_id)
+
+    return max_friends
 
 
 def average_num_friends(network):
     '''(2Dlist)->number
-    Returns an average number of friends overs all users in the network'''
-
-    # YOUR CODE GOES HERE
-    pass
+    Returns an average number of friends overs all users in the network
+    '''
+    total_friends = 0
+    for user_id, friends in network:
+        total_friends += len(friends)
+    return total_friends / len(network)
     
 
 def knows_everyone(network):
@@ -90,9 +237,10 @@ def knows_everyone(network):
     Given a 2D-list for friendship network,
     returns True if there is a user in the network who knows everyone
     and False otherwise'''
-    
-    # YOUR CODE GOES HERE
-    pass
+    for user_id, friends in network:
+        if len(friends) == len(network) - 1:
+            return True
+    return False
 
 
 ####### CHATTING WITH USER CODE:
@@ -125,8 +273,19 @@ def get_uid(network):
     Keeps on asking for a user ID that exists in the network
     until it succeeds. Then it returns it'''
     
-    # YOUR CODE GOES HERE
-    pass
+    uid = None
+    ids = [user_id for user_id, _ in network]
+    while uid == None:
+        uid = input("Enter an integer for a user ID: ").strip()
+        if not uid.isdigit():
+            print("That was not an integer. Please try again.")
+            uid = None
+            continue
+        uid = int(uid)
+        if uid not in ids:
+            print("That user ID does not exist. Try again.")
+            uid = None
+    return uid
     
 
 ##############################
